@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: black;
+}
+
+.navbar-brand:hover {
+    /* Consider removing or adjusting this */
+    color: black;
+}
+
+.nav-link {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    font-family: 'Lobster', cursive;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.search {
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -35px;
+    border: 2px solid rgb(248, 26, 92);
+}
+
+.btn0 {
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: rgb(248, 26, 92);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+}
+
+.main {
+    background: url('pulses\ 1'); 
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+}
+
+.main h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.btn1 {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26, 92);
+    color: black;
+    font-weight: 700;
+    border-radius: 60px;
+}
+.btn1:hover{
+    background-color: rgb(248, 26, 92);
+}
+
+h1 {
+    color: black;
+    font-weight: 1000;
+}
+h6{
+    color: black;
+    font-weight: 800;
+
+}
+
+/* last banner */
+.apple{
+    background:   url(photo.jpg)no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+/* last part */
+.news{
+    background-color: black;
+    color: white;
+    
+}
+.news p{
+    margin: 0;
+}

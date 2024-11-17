@@ -1,0 +1,35 @@
+/* Existing styles */
+
+.overlay-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.overlay-content h2,
+.overlay-content .price {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.add-to-cart-btn,
+.like-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.add-to-cart-btn:hover,
+.like-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Other existing styles */

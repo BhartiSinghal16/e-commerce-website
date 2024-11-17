@@ -1,0 +1,188 @@
+:root {
+    --primary-color: #3bb77e;
+    --secondary: #313033;
+    --bg: #e2f9ee;
+    --black: #1c2137;
+    --white: #fff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+  
+    background: transparent;
+}
+
+.btn{
+   margin-top: 1rem;
+   display: inline-block;
+   padding: 1.3rem 3.5rem;
+   font-size: 1.7rem;
+   color: var(--white);
+   border-radius: .5rem;
+   background: var(--primary-color);
+   cursor:pointer;
+
+}
+.btn:hover{
+    color:var(--white);
+    background: var(--secondary);
+    box-shadow: var(--box-shadow);
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5rem;
+}
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .logo:hover {
+    color: var(--secondary);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+    color: var(--primary-color);
+}
+
+.header .icons div {
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .icons div:hover {
+    color: var(--primary-color);
+}
+
+.shopping-cart {
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    background: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    padding: 2rem;
+    transition: right 0.3s ease; /* Added transition for smooth animation */
+}
+
+.shopping-cart.active {
+    right: 2rem;
+}
+
+/* login form */
+.login-form {
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    background: var(--white);
+    border-radius: 0.5rem; /* Corrected the value to a positive number */
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    padding: 2rem;
+    transition: 0.4s linear;
+}
+
+.login-form.active {
+    right: 2rem;
+}
+
+
+
+/* home */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    height: 100vh;
+    background-position: 50% 50%;
+    width:200%;
+    
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.overlay-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.overlay-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Other existing styles */

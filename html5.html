@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .photo {
+            flex: 1;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo img {
+            width: 80%; /* Adjust the width as needed */
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo:hover img {
+            transform: scale(1.1);
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #eee;
+            border-top: 1px solid #ddd;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 8px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .like-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .cart-btn {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+
+        
+        .h1 {
+            text-align: center;
+            font-size: 20px;
+           
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-decoration: underline;">PRODUCTS</h1>
+
+    <br>
+    <br>
+
+    <!-- Row 1 -->
+    <div class="row">
+        <div class="photo">
+            <img src="Rajma.jpg" alt="Product 1" >
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;40</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+           <br> <div class="h1">Rajma</div><br>
+        </div>
+        <div class="photo">
+            <img src="fortune soya chunks.webp" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;153</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Fortune soya chunks</div><br>
+        </div>
+        <div class="photo">
+            <img src="besan.webp" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;103</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Besan</div><br>
+        </div>
+        <div class="photo">
+            <img src="maida.webp" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;39</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Maida</div><br>
+        </div>
+        <!-- Repeat for other photos in Row 1 -->
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+        <div class="photo">
+            <img src="rwa.webp" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;152</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Rawa</div><br>
+        </div>
+        <div class="photo">
+            <img src="oreo.webp" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;50</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Oreo</div><br>
+        </div>
+        <div class="photo">
+            <img src="dairy.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;100</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Dairy-Milk</div><br>
+        </div>
+        <div class="photo">
+            <img src="maggi.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;45</span></div>
+                <div class="price">$19.99</div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Maggi</div><br>
+        </div>
+        <!-- Repeat the structure for Row 2 -->
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row">
+        <div class="photo">
+            <img src="coca-cola.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;45</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Coca-Cola</div><br>
+        </div>
+        <div class="photo">
+            <img src="fanta.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;40</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Fanta</div><br>
+        </div>
+        <div class="photo">
+            <img src="appy.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;35</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Appy-Fizz</div><br>
+        </div>
+        <div class="photo">
+            <img src="sprite.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;35</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Sprite</div><br>
+        </div>
+        <!-- Repeat the structure for Row 3 -->
+    </div>
+
+    <!-- Row 4 -->
+    <div class="row">
+        <div class="photo">
+            <img src="Tea.webp" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;135</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Tata Tea Premium</div><br>
+        </div>
+        <div class="photo">
+            <img src="coffee.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;600</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Coffee</div><br>
+        </div>
+        <div class="photo">
+            <img src="real juice.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;237</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Real Juice</div><br>
+        </div>
+        <div class="photo">
+            <img src="bournvita.jpg" alt="Product 1">
+            <div class="actions">
+                <button class="like-btn" onclick="like(1)"><i class="fas fa-thumbs-up"></i> Like</button>
+                <div class="price"><span>&#8377;248</span></div>
+                <button class="cart-btn" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <br> <div class="h1">Bournvita</div><br>
+        </div>
+        <!-- Repeat the structure for Row 4 -->
+    </div>
+
+    
+
+    <script>
+        function like(productId) {
+            alert('Liked Product ' + productId);
+            // Add additional logic for handling the "Like" action
+        }
+
+        function addToCart(productId) {
+            alert('Added Product ' + productId + ' to Cart');
+            // Add additional logic for handling the "Add to Cart" action
+        }
+    </script>
+</body>
+</html>
